@@ -20,6 +20,9 @@
 		F4FBB0EB26131F0B00CFF35C /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FBB0E926131F0B00CFF35C /* MenuTableViewCell.xib */; };
 		F4FBB0F2261320C600CFF35C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FBB0F1261320C600CFF35C /* MainViewModel.swift */; };
 		F4FBB0FE2613218F00CFF35C /* MenuCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FBB0FD2613218F00CFF35C /* MenuCellViewModel.swift */; };
+		F4FBB106261423D600CFF35C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FBB105261423D600CFF35C /* DetailViewController.swift */; };
+		F4FBB10B261423E200CFF35C /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FBB10A261423E200CFF35C /* Detail.storyboard */; };
+		F4FBB1102614242700CFF35C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FBB10F2614242700CFF35C /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		F4FBB0E926131F0B00CFF35C /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F4FBB0F1261320C600CFF35C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F4FBB0FD2613218F00CFF35C /* MenuCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellViewModel.swift; sourceTree = "<group>"; };
+		F4FBB105261423D600CFF35C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F4FBB10A261423E200CFF35C /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		F4FBB10F2614242700CFF35C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FBB0F1261320C600CFF35C /* MainViewModel.swift */,
+				F4FBB10F2614242700CFF35C /* DetailViewModel.swift */,
 				F4FBB0FD2613218F00CFF35C /* MenuCellViewModel.swift */,
 			);
 			path = ViewModels;
@@ -179,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FBB0B226131D5E00CFF35C /* Main.storyboard */,
+				F4FBB10A261423E200CFF35C /* Detail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FBB0B026131D5E00CFF35C /* MainViewController.swift */,
+				F4FBB105261423D600CFF35C /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				F4FBB0B926131D5F00CFF35C /* LaunchScreen.storyboard in Resources */,
 				F4FBB0B626131D5F00CFF35C /* Assets.xcassets in Resources */,
 				F4FBB0EB26131F0B00CFF35C /* MenuTableViewCell.xib in Resources */,
+				F4FBB10B261423E200CFF35C /* Detail.storyboard in Resources */,
 				F4FBB0B426131D5E00CFF35C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +336,11 @@
 				F4FBB0AD26131D5E00CFF35C /* AppDelegate.swift in Sources */,
 				F4FBB0FE2613218F00CFF35C /* MenuCellViewModel.swift in Sources */,
 				F4FBB0AF26131D5E00CFF35C /* SceneDelegate.swift in Sources */,
+				F4FBB1102614242700CFF35C /* DetailViewModel.swift in Sources */,
 				F4FBB0E326131ED500CFF35C /* MenuHandler.swift in Sources */,
 				F4FBB0EA26131F0B00CFF35C /* MenuTableViewCell.swift in Sources */,
 				F4FBB0F2261320C600CFF35C /* MainViewModel.swift in Sources */,
+				F4FBB106261423D600CFF35C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
