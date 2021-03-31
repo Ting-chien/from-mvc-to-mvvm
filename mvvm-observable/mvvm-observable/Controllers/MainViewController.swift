@@ -26,11 +26,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         bindViewModel()
-        viewModel.downloadMenu()
     }
     
     func bindViewModel() {
-        viewModel.onRequestEnd = { [weak self] in
+        viewModel.onRequestEnd.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }

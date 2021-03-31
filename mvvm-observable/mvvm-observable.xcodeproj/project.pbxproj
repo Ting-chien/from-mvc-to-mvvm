@@ -20,6 +20,7 @@
 		F4FA8E36261450880097E13A /* MenuCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA8E34261450880097E13A /* MenuCellViewModel.swift */; };
 		F4FA8E37261450880097E13A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA8E35261450880097E13A /* MainViewModel.swift */; };
 		F4FA8E3D2614509E0097E13A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA8E3C2614509E0097E13A /* MainViewController.swift */; };
+		F4FA8E49261455FF0097E13A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA8E48261455FF0097E13A /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F4FA8E34261450880097E13A /* MenuCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellViewModel.swift; sourceTree = "<group>"; };
 		F4FA8E35261450880097E13A /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F4FA8E3C2614509E0097E13A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4FA8E48261455FF0097E13A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		F4FA8E41261450A30097E13A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F4FA8E48261455FF0097E13A /* Observable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FA8E49261455FF0097E13A /* Observable.swift in Sources */,
 				F4FA8E37261450880097E13A /* MainViewModel.swift in Sources */,
 				F4FA8DEC26144FDD0097E13A /* AppDelegate.swift in Sources */,
 				F4FA8DEE26144FDD0097E13A /* SceneDelegate.swift in Sources */,

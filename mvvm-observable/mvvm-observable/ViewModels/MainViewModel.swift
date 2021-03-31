@@ -8,11 +8,17 @@
 import UIKit
 
 class MainViewModel {
+    
     private var menuHandlers: [MenuHandler] = []
     public private(set) var menuCellViewModels: [MenuCellViewModel] = []
     
     // on completion outputs
-    var onRequestEnd: (() -> Void)?
+    var onRequestEnd: Observable<Void> = Observable(())
+    var onRequestFail: Observable<Error>?
+    
+    init() {
+        downloadMenu()
+    }
     
     func downloadMenu() {
         let url = URL(string: "https://api.airtable.com/v0/appni65Bpbng3St79/Menu")!
@@ -26,19 +32,18 @@ class MainViewModel {
                let records = json["records"] as? [[String: Any]] {
                 self.menuHandlers.append(contentsOf: MenuHandler.parseResults(records))
                 self.convertMenuToViewModel(menus: self.menuHandlers)
+                print("request success.....................")
             } else {
-                print(error?.localizedDescription ?? "error request...")
+                self.onRequestFail!.value = error!
             }
         }.resume()
     }
     
     private func convertMenuToViewModel(menus: [MenuHandler]) {
         for menu in menus {
-            let menuCellViewModel = MenuCellViewModel(name: menu.name,
-                                                      price: menu.price,
-                                                      imageUrl: menu.imageUrl)
+            let menuCellViewModel = MenuCellViewModel(menu, observableFail: onRequestFail)
             menuCellViewModels.append(menuCellViewModel)
         }
-        onRequestEnd?()
+        onRequestEnd.value = ()
     }
 }

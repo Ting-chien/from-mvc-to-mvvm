@@ -29,21 +29,31 @@ class MenuTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         icon.image = nil
-        self.viewModel?.onImageDownloaded = nil
+        self.viewModel?.clearOnReuse()
     }
     
     func setup(viewModel: MenuCellViewModel) {
         
         self.viewModel = viewModel
         
-        self.name.text = viewModel.name
-        self.price.text = "售價：$\(viewModel.price)"
-        self.viewModel?.onImageDownloaded = { [weak self] image in
+        viewModel.events.onNameChanged.bind { [weak self] value in
             DispatchQueue.main.async {
-                self?.icon.image = image
+                self?.name.text = value
             }
         }
-        self.viewModel?.getImage()
+        
+        viewModel.events.onPriceChanged.bind { [weak self] value in
+            DispatchQueue.main.async {
+                self?.price.text = value
+            }
+        }
+        
+        viewModel.events.onImageDownloaded.bind { [weak self] value in
+            DispatchQueue.main.async {
+                self?.icon.image = value
+            }
+        }
+        
     }
 
 }
